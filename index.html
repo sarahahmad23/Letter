@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Date Website</title>
+    <style>
+        body {
+            background-color: #fddfdf;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ff4d6b;
+            font-size: 2em;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            border-bottom: 2px solid #ff4d6b;
+        }
+
+        li {
+            margin: 0;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        li:hover {
+            background-color: #ff4d6b;
+            color: white;
+        }
+
+        section {
+            display: none;
+        }
+
+        #letter,
+        #photos {
+            display: block;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌸 For Syuek <3 🌸</h1>
+
+    <ul>
+        <li onclick="showTab('letter')">A Letter</li>
+        <li onclick="showTab('photos')">Our Photos</li>
+    </ul>
+
+    <section id="letter">
+        <p>Dear Syuek,</p>
+        <p>Happy Belated Birthday, this is a late gift from me. I just want to say thank you for coming into my life an becoming someone that I can call a bestfriend. Life is an amazing journey with you hehe. Your company brings so much joy and happiness to my life, and I can't think of anyone I'd rather share this adventure with.</p>
+        <p>Would you do me the honor of going on a lepak with me?</p>
+        <p>Looking forward to creating beautiful memories together!</p>
+        <p>Yours truly,<br>Your little syuek </p>
+    </section>
+
+    <section id="photos">
+        <img src="Downloads/icity.jpg" alt="Our Photo 1">
+        <img src="Downloads/bowling.jpg" alt="Our Photo 2">
+        
+    </section>
+
+    <script>
+        function showTab(tabId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            document.getElementById(tabId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
